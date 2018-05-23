@@ -45,7 +45,7 @@ public class LessonService {
 		
 	}
 	
-	@GetMapping("/api/course/{courseId}/module")
+	@GetMapping("/api/course/{moduleId}/lesson")
 	public List<Lesson> findAllLessonsForModule(
 			@PathVariable("moduleId") int moduleId) {
 		Optional<Module> data = moduleRepository.findById(moduleId);

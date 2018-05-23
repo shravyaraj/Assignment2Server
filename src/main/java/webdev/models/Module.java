@@ -17,7 +17,7 @@ public class Module {
 	private int id;
 	private String title;
 	@OneToMany(mappedBy="module")
-	private List<Lesson> lessons;
+	private List<Lesson> lesson;
 	@ManyToOne
 	@JsonIgnore
 	private Course course;
@@ -38,5 +38,11 @@ public class Module {
 	}
 	public void setCourse(Course course) {
 		this.course = course;
+	}
+	public List<Lesson> getLessons() {
+		return lesson;
+	}
+	public void setLessons(List<Lesson> lesson) {
+		this.lesson = lesson;
 	}
 }

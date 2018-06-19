@@ -13,7 +13,7 @@ import webdev.models.Course;
 import webdev.repositories.CourseRepository;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin("*")
 public class CourseServices {
 	@Autowired
 	CourseRepository courseRepository;

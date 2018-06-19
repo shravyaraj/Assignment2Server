@@ -1,7 +1,5 @@
 package webdev.models;
 
-import static org.assertj.core.api.Assertions.allOf;
-
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +15,7 @@ public class Course {
 	private Date created;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modified;
-	@OneToMany(mappedBy="course")
+	@OneToMany(mappedBy="course",cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<Module> modules;
 	public int getId() {
 		return id;
